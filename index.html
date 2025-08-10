@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Life Calendar — 90 Years in Weeks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>Life Calendar — 90 Years × 52 Weeks</h1>
+        <p class="sub">
+          Click squares to toggle: blank → past → event. Long‑press /
+          double‑click / right‑click an event to add/edit a note. Enter your
+          birthdate to auto‑fill the past weeks. Your progress is saved in your
+          browser.
+        </p>
+        <div class="controls">
+          <div>
+            <label for="birthdate">Birthdate</label><br />
+            <input id="birthdate" type="date" />
+            <div><small id="ageInfo">Age: —</small></div>
+          </div>
+          <button id="applyBirth">Apply & Fill Past</button>
+          <button id="clearPast">Recompute Past Only</button>
+          <button id="resetAll" title="Clears everything including events">
+            Reset All
+          </button>
+          <div class="legend" style="justify-self: end">
+            <span class="key"><span class="swatch blank"></span>Blank</span>
+            <span class="key"><span class="swatch past"></span>Past</span>
+            <span class="key"><span class="swatch event"></span>Event</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="board-wrap" id="boardWrap">
+        <div id="board" class="board" aria-label="Life weeks grid"></div>
+      </div>
+      <p class="footer-note">
+        Tip: Single‑click cycles states. Long‑press (500ms), double‑click, or
+        right‑click an event to edit its note.
+      </p>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
